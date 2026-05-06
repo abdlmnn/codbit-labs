@@ -1,6 +1,5 @@
 # Hello, Solo developer!
 
---
 
 ## I'll introduce you codbit
 A VS Code extension that helps developers save their unfinished thoughts while coding so they can continue where they left off without losing context.
