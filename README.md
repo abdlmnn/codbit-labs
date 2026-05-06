@@ -20,7 +20,8 @@ Codbit helps you in many ways.
 - attach notes directly to code or files
 - remember what you planned next
 - track small workflow ideas
-This is like a memory layer for your coding flow.
+
+#### This is like a memory layer for your coding flow.
 
 ### The core idea of codbit
 Not a managing tasks, it's about helping you continue your coding thoughts without losing them.
