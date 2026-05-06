@@ -25,5 +25,5 @@ This is like a memory layer for your coding flow.
 ### The core idea of codbit
 Not a managing tasks, it's about helping you continue your coding thoughts without losing them.
 
-## The current status
+### The current status
 Is still under active development and evolving as a developer workflow tool inside VS Code.
