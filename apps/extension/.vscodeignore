@@ -1,0 +1,15 @@
+.vscode/**
+.next/**
+.turbo/**
+app/**
+public/**
+next.config.js
+eslint.config.js
+tsconfig.json
+tsconfig.extension.json
+src/**
+**/*.map
+**/*.tsbuildinfo
+next-env.d.ts
+.gitignore
+node_modules/**
