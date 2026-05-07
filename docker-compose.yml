@@ -1,0 +1,12 @@
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: codbit-server
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - CODBIT_API_KEY=codbit-dev-key-change-me
+      - DATABASE_URL=file:./prisma/dev.db
