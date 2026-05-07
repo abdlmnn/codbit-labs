@@ -1,0 +1,79 @@
+{
+  "name": "extension",
+  "displayName": "Codbit",
+  "description": "Memory layer for unfinished coding thoughts in VS Code.",
+  "version": "0.1.0",
+  "publisher": "abdulmanan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdulmanan/codbit-labs.git"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:codbit.rememberSelection"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codbit.rememberSelection",
+        "title": "Codbit: Remember this..."
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codbit.rememberSelection",
+          "when": "editorHasSelection",
+          "group": "navigation@20"
+        }
+      ]
+    },
+    "colors": [
+      {
+        "id": "codbit.statusBarForeground",
+        "description": "Codbit status bar text color",
+        "defaults": {
+          "dark": "#8ec5ff",
+          "light": "#2a6db8"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "npm run watch",
+    "compile": "tsc -p ./tsconfig.extension.json",
+    "watch": "tsc -watch -p ./tsconfig.extension.json",
+    "vscode:prepublish": "npm run compile",
+    "package:vsix": "npm run compile && npx @vscode/vsce package --no-dependencies --out codbit.vsix",
+    "publish:check": "npm run lint && npm run check-types && npm run package:vsix",
+    "publish:patch": "npm run publish:check && npx @vscode/vsce publish patch --no-dependencies",
+    "publish:minor": "npm run publish:check && npx @vscode/vsce publish minor --no-dependencies",
+    "publish:major": "npm run publish:check && npx @vscode/vsce publish major --no-dependencies",
+    "lint": "eslint --max-warnings 0",
+    "check-types": "tsc -p ./tsconfig.extension.json --noEmit"
+  },
+  "dependencies": {
+    "@codbit/types": "workspace:^",
+    "next": "16.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "^9.39.1",
+    "typescript": "5.9.2",
+    "@types/vscode": "^1.80.0"
+  }
+}
