@@ -1,0 +1,152 @@
+.page {
+  min-height: 100svh;
+  color: #0e2237;
+  background:
+    radial-gradient(circle at 10% 10%, #d4edff 0%, transparent 35%),
+    radial-gradient(circle at 90% 0%, #c8dcff 0%, transparent 32%),
+    linear-gradient(180deg, #f6fbff 0%, #edf4ff 45%, #e7f2ff 100%);
+}
+
+.shell {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+}
+
+.title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #355a80;
+}
+
+.pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #0f4f8e;
+  color: #eef8ff;
+  font-size: 0.86rem;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.panel {
+  border: 1px solid #c7def6;
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.panelTitle {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.heatCell {
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #cae0f6;
+  min-height: 82px;
+}
+
+.day {
+  font-size: 0.8rem;
+  color: #507296;
+}
+
+.minutes {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.legend {
+  margin-top: 10px;
+  color: #53789f;
+  font-size: 0.84rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chip {
+  border: 1px solid #bdd8f5;
+  background: #f2f8ff;
+  color: #1f4468;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.memoryItem {
+  border: 1px solid #d4e5f8;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fbfdff;
+}
+
+.memoryMeta {
+  margin-top: 6px;
+  color: #57779a;
+  font-size: 0.8rem;
+}
+
+.pulseList {
+  display: grid;
+  gap: 10px;
+}
+
+.pulseItem {
+  border: 1px solid #d6e6f8;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f9fcff;
+}
+
+.pulseTitle {
+  font-weight: 600;
+}
+
+.pulseStats {
+  margin-top: 6px;
+  font-size: 0.83rem;
+  color: #547696;
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
